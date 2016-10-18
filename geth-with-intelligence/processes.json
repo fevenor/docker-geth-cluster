@@ -1,6 +1,7 @@
 [
   {
-    "name"              : "node-app",
+    "name"              : "ethstats-client",
+    "cwd"               : "/root/eth-net-intelligence-api/",
     "script"            : "app.js",
     "log_date_format"   : "YYYY-MM-DD HH:mm Z",
     "merge_logs"        : false,
@@ -14,8 +15,8 @@
       "RPC_HOST"        : "localhost",
       "RPC_PORT"        : "8545",
       "LISTENING_PORT"  : "30303",
-      "INSTANCE_NAME"   : "PrivateChain",
-      "CONTACT_DETAILS" : "",
+      "INSTANCE_NAME"   : "INSTANCE_NAME_TEMP",
+      "CONTACT_DETAILS" : "CONTACT_DETAILS_TEMP",
       "WS_SERVER"       : "ws://statsmon:3000",
       "WS_SECRET"       : "eth-net-stats-secret",
       "VERBOSITY"       : 2

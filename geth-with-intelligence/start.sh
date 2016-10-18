@@ -1,7 +1,8 @@
 #!/bin/sh
-set -e
-cd /root/eth-net-intelligence-api
-perl -pi -e "s/XXX/$(hostname)/g" app.json
-/usr/bin/pm2 start ./app.json
+
+sed -ie "s/\INSTANCE_NAME_TEMP/$HOSTNAME/" /root/processes.json
+sed -ie "s/\CONTACT_DETAILS_TEMP/$CONTACT_DETAILS/" /root/processes.json
+
+/usr/bin/pm2 start /root/processes.json
 sleep 3
 /geth $@

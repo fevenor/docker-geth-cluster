@@ -13,8 +13,12 @@ RUN \
 
 EXPOSE 8545 30303
 
-ADD start.sh /root/start.sh
-ADD app.json /root/eth-net-intelligence-api/app.json
+COPY start.sh processes.json /root/
 RUN chmod +x /root/start.sh
+
+WORKDIR /root
+
+ENV INSTANCE_NAME=
+ENV CONTACT_DETAILS=
 
 ENTRYPOINT /root/start.sh
