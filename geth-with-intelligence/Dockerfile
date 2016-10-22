@@ -13,7 +13,7 @@ RUN \
 
 EXPOSE 8545 30303
 
-COPY start.sh processes.json /root/
+COPY start.sh processes.json genesis.json /root/
 RUN chmod +x /root/start.sh
 
 WORKDIR /root
